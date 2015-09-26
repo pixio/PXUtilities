@@ -49,7 +49,7 @@
     NSInteger _left;
 }
 
-+ (void)downloadAndListObjects:(NSArray*)objects downloadBlock:(void(^)(id objectId, callbackWithThing callback))downloadBlock completion:(void(^)(NSArray * list, NSArray * objects))completion
++ (void)downloadAndListObjects:(NSArray*)objects downloadBlock:(void(^)(id object, callbackWithThing callback))downloadBlock completion:(void(^)(NSArray * list, NSArray * objects))completion
 {
     PXAsyncUtilities * downloader = [[PXAsyncUtilities alloc] init];
     [downloader setDownloadCompletion:completion];

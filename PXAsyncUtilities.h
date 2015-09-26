@@ -47,14 +47,14 @@ typedef void(^callbackWithBool)(BOOL);
  *              which will be ignored safely.
  *  @discussion Any blocks which return nil will also not have their object returned to the final callback
  *              in the list of objects.
- *  @discussion The list of @c objectIds returned along with the completed @c list is in the same order as the downloaded
- *              output in case the order changed as a result of the download or there were @c nil results.
+ *  @discussion The list of @c objects returned along with the completed @c list is in the same order as the 
+ *              downloaded output in case the order changed as a result of the download or there were @c nil results.
  *
- *  @param objectIds     ids of objects to download
- *  @param downloadBlock block which downloads an object with the given id
+ *  @param objects       objects to download
+ *  @param downloadBlock block which performs a download operation for a specified object
  *  @param completion    completion to call when the list is complete
  */
-+ (void)downloadAndListObjects:(NSArray*)objects downloadBlock:(void(^)(id objectId, callbackWithThing callback))downloadBlock completion:(void(^)(NSArray * list, NSArray * objectIds))completion;
++ (void)downloadAndListObjects:(NSArray*)objects downloadBlock:(void(^)(id object, callbackWithThing callback))downloadBlock completion:(void(^)(NSArray * list, NSArray * objectIds))completion;
 
 /**
  *  Asynchronously perform the specified operation on the given objects, recording success of each.
