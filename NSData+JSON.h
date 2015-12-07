@@ -30,4 +30,8 @@
 
 - (id)JSONValue;
 
++ (NSData*)JSONDataFromArray:(NSArray*)array;
+
++ (NSData*)JSONDataFromDictionary:(NSDictionary*)dictionary;
+
 @end

@@ -35,4 +35,14 @@
     return jsonDictOrArray;
 }
 
++ (NSData*)JSONDataFromArray:(NSArray*)array
+{
+    return [NSJSONSerialization dataWithJSONObject:array options:0 error:NULL];
+}
+
++ (NSData*)JSONDataFromDictionary:(NSDictionary*)dictionary
+{
+    return [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:NULL];
+}
+
 @end
