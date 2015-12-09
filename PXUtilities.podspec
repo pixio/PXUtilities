@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
+  s.version          = "0.2.5"
   s.name             = "PXUtilities"
-  s.version          = "0.2.4"
   s.summary          = "Utilities for lots of different things.  All useful."
   s.description      = <<-DESC
                        A toolbox of useful stuff:

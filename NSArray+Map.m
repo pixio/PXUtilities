@@ -36,7 +36,7 @@
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         id newObj = block(obj, idx);
         if (newObj) {
-            [result addObject:block(obj, idx)];
+            [result addObject:newObj];
         }
     }];
     
