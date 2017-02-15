@@ -28,6 +28,6 @@
 
 @interface NSString (JSON)
 
-- (id)JSONValue;
+- (nullable id)JSONValue;
 
 @end

@@ -28,10 +28,10 @@
 
 @interface NSData (JSON)
 
-- (id)JSONValue;
+- (nullable id)JSONValue;
 
-+ (NSData*)JSONDataFromArray:(NSArray*)array;
++ (nullable NSData*)JSONDataFromArray:(nonnull NSArray*)array;
 
-+ (NSData*)JSONDataFromDictionary:(NSDictionary*)dictionary;
++ (nullable NSData*)JSONDataFromDictionary:(nonnull NSDictionary*)dictionary;
 
 @end

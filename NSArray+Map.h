@@ -28,6 +28,6 @@
 
 @interface NSArray (Map)
 
-- (NSMutableArray*)mapAndFilter:(id (^)(id obj, NSUInteger idx))block;
+- (nonnull NSMutableArray*)mapAndFilter:(nonnull id _Nonnull (^)(id _Nonnull obj, NSUInteger idx))block;
 
 @end

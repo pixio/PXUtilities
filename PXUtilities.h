@@ -38,7 +38,7 @@
  *
  *  @return an @c NSURL for the url that was in the string or @c nil if there wasn't a URL in the string
  */
-+ (NSURL*)convertStringToURL:(NSString*)string;
++ (nullable NSURL*)convertStringToURL:(nullable NSString*)string;
 
 /**
  *  Formats a date into a string relative to now: "5 minutes ago", "10 years ago", "just now", etc..
@@ -47,7 +47,7 @@
  *
  *  @return a string indicating how long ago the date specified is relative to now.
  */
-+ (NSString*)formatDateRelativeToNow:(NSDate*)date;
++ (nonnull NSString*)formatDateRelativeToNow:(nonnull NSDate*)date;
 
 /**
  *  Formats a date into a string relative to now: "5 minutes ago" or "5m", "10 years ago" or "10y", "now" or "just now", etc..
@@ -57,7 +57,7 @@
  *
  *  @return a string indicating how long ago the date specified is relative to now.
  */
-+ (NSString*)formatDateRelativeToNow:(NSDate*)date shortFormat:(BOOL)shortFormat;
++ (nonnull NSString*)formatDateRelativeToNow:(nonnull NSDate*)date shortFormat:(BOOL)shortFormat;
 
 /**
  *  Generates a URL for a gravatar for a given email.
@@ -66,6 +66,6 @@
  *
  *  @return the gravatar URL for that email.
  */
-+ (NSURL*)gravatarURLForEmail:(NSString*)email;
++ (nullable NSURL*)gravatarURLForEmail:(nonnull NSString*)email;
 
 @end

@@ -35,7 +35,7 @@
 /**
  *  Shared singleton that keeps geocoding state.
  */
-+ (instancetype)sharedManger;
++ (nonnull instancetype)sharedManger;
 
 /**
  *  Adds the geocoding operation to the queue and executes it when there are no older requests.
@@ -43,6 +43,6 @@
  *  @param addressString the string address to be geocoded
  *  @param callback      callback for returning the placemark
  */
-- (void)geocodeAddressString:(NSString*)addressString callback:(void(^)(CLPlacemark * placemark, NSInteger errorCode))callback;
+- (void)geocodeAddressString:(nonnull NSString*)addressString callback:(nonnull void(^)(CLPlacemark * _Nullable placemark, NSInteger errorCode))callback;
 
 @end

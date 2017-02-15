@@ -26,7 +26,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^callbackWithThing)(id);
+typedef void(^callbackWithThing)(id _Nullable);
 typedef void(^callbackWithBool)(BOOL);
 
 /**
@@ -54,7 +54,7 @@ typedef void(^callbackWithBool)(BOOL);
  *  @param downloadBlock block which performs a download operation for a specified object
  *  @param completion    completion to call when the list is complete
  */
-+ (void)downloadAndListObjects:(NSArray*)objects downloadBlock:(void(^)(id object, callbackWithThing callback))downloadBlock completion:(void(^)(NSArray * list, NSArray * objectIds))completion;
++ (void)downloadAndListObjects:(nonnull NSArray*)objects downloadBlock:(nonnull void(^)(id _Nonnull object, callbackWithThing _Nonnull callback))downloadBlock completion:(nullable void(^)(NSArray * _Nonnull list, NSArray * _Nonnull objectIds))completion;
 
 /**
  *  Asynchronously perform the specified operation on the given objects, recording success of each.
@@ -69,6 +69,6 @@ typedef void(^callbackWithBool)(BOOL);
  *  @param operation  block which performs some async operation
  *  @param completion completion to call when all async operations are done
  */
-+ (void)useObjects:(NSArray*)objects forOperation:(void(^)(id object, callbackWithBool callback))operation completion:(void(^)(NSArray * successes, NSArray * failures))completion;
++ (void)useObjects:(nonnull NSArray*)objects forOperation:(nonnull void(^)(id _Nonnull object, callbackWithBool _Nonnull callback))operation completion:(nullable void(^)(NSArray * _Nonnull successes, NSArray * _Nonnull failures))completion;
 
 @end
